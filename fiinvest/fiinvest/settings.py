@@ -13,11 +13,19 @@ SPIDER_MODULES = ["fiinvest.spiders"]
 NEWSPIDER_MODULE = "fiinvest.spiders"
 
 
+DOWNLOAD_HANDLERS = {
+
+    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+}
+
+TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "fiinvest (+http://www.yourdomain.com)"
+#USER_AGENT = "fi (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -45,13 +53,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "fiinvest.middlewares.FiinvestSpiderMiddleware": 543,
+#    "fi.middlewares.FiSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "fiinvest.middlewares.FiinvestDownloaderMiddleware": 543,
+#    "fi.middlewares.FiDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +71,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    "fiinvest.pipelines.FiinvestPipeline": 300,
+#    "fi.pipelines.FiPipeline": 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
