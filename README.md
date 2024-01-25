@@ -4,7 +4,7 @@
 
 * Para executar o projeto em seu computador, primeiro faça git clone do repositório.
 
-`https://github.com/claytoncampos/scrapy-fii.git` 
+`git clone https://github.com/claytoncampos/web-crawler-fundos-imobiliarios.git`
 
 * Instale as dependências executando o comando abaixo.
 
@@ -12,7 +12,7 @@
 
 * Navegue até o diretorio \fiinvest
 
-`cd .\fiinvest`
+`cd .\web-crawler-fundos-imobiliarios`
 
 * Execute o comando abaixo para rodar o crawler.
 
